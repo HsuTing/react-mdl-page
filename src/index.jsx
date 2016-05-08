@@ -24,7 +24,7 @@ export default class Page extends React.Component {
                 let Data = dd.data === undefined ? {} : dd.data;
 
                 return (
-                  <Component data={ Data } />
+                  <Component key={ii} data={ Data } />
                 );
               })}
             </div>
