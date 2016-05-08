@@ -1,4 +1,4 @@
-# React mdl Page
+# React MDL Page
 
 ## Props
 

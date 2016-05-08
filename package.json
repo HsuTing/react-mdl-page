@@ -28,7 +28,9 @@
     "babel-preset-react": "^6.5.0"
   },
   "peerDependencies": {
-    "react": "^15.0.2",
-    "react-null": "^1.0.0"
+    "react": "^15.0.2"
+  },
+  "dependencies": {
+    "react-null": "^1.0.3"
   }
 }
