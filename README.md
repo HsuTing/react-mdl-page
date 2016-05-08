@@ -23,15 +23,15 @@ You will get like this:
 </div>
 ```
 
-You can also add a component, like this:
+You can also add components, like this:
 ```
   import YourComponent from 'your/path/to/component';
 
   'data' [
     {
-      'component': 'YourComponent'
+      'components': [{ 'component': 'YourComponent' }, { 'component': 'YourComponent' }]
     }
   ]
 ```
 
-- data can have `id`, `class`, `style`, `component`, `data`.
+- data can have `id`, `class`, `style`, `components`. `data` and component can be added in objects of component.

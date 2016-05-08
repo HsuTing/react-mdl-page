@@ -11,8 +11,7 @@ export default class Page extends React.Component {
           let pageId = d.id === undefined ? "" : d.id;
           let pageClass = d.class === undefined ? "page-content" : "page-content "+d.class;
           let pageStyle = d.style === undefined ? {} : d.style;
-          let Component = d.component === undefined ? Null : d.component;
-          let Data = d.data === undefined ? {} : d.data;
+          let components = d.components === undefined ? [] : d.components;
 
           return (
             <div key={i}
@@ -20,7 +19,14 @@ export default class Page extends React.Component {
                  className={ pageClass }
                  style={ pageStyle }
             >
-              <Component data={ Data } />
+              {components.map((dd, ii) => {
+                let Component = dd.component === undefined ? Null : dd.component;
+                let Data = dd.data === undefined ? {} : dd.data;
+
+                return (
+                  <Component data={ Data } />
+                );
+              })}
             </div>
           );
         })}

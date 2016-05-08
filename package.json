@@ -1,6 +1,6 @@
 {
   "name": "react-mdl-page",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "mdl page for react",
   "main": "./lib/index.js",
   "scripts": {
