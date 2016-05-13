@@ -1,37 +1,53 @@
 # React MDL Page
 
-## Props
+You can use it to put your component in an array.
 
-You can give data to component like this:
+## Use
+
+- This is a react class. As a result, you need to use `ReactDOM.render` to render.
 ```
-  data = [
+  import React from 'ract';
+  import ReactDOM from 'react-dom';
+  import page from 'react-mdl-page';
+
+  import Component from './path/to/component';
+
+  let data = [
     {
-      'id': 'pageId',
-      'class': 'pageClass',
-      'style': {}
-    }
-  ]
-
-  <Page data={data} />
-```
-
-You will get like this:
-```
-<div>
-  <div id="pageId" class="mdl-page pageClass">
-  </div>
-</div>
-```
-
-You can also add components, like this:
-```
-  import YourComponent from 'your/path/to/component';
-
-  'data' [
+      "id": "page-one",
+      "components": [
+        {
+          "component": Component,
+          "data": (data Copmonent use)
+        }
+      ]
+    },
     {
-      'components': [{ 'component': 'YourComponent' }, { 'component': 'YourComponent' }]
+      "id": "page-two",
+      "components": [
+        {
+          "component": Component,
+          "data": (data Copmonent use)
+        }
+      ]
     }
-  ]
+  ];
+
+  ReactDOM.render(<Page data={ data }/>, document.getElementById("root"));
 ```
 
-- data can have `id`, `class`, `style`, `components`. `data` and component can be added in objects of component.
+## Data
+
+- data:
+```
+  data = {
+    'id': 'pageId',
+    'class': 'pageClass',
+    'style': {color: 'black'},
+    'cells': []
+  }
+
+// It will render a html like this
+  <div id="pageId" class="page-content pageClass" style="color: black;"></div>
+```
+- you not need to set all `id`, `class`, `style` and `cells`. You just use attributes needed.
